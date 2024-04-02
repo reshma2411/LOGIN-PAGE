@@ -1,0 +1,81 @@
+/* CSS for animations */
+body {
+    background-color: #f0f0f0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+.drop {
+    background-color: #68d7fc;
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    animation: dropAnimation 2s ease infinite alternate;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes dropAnimation {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        transform: translateY(20px) scale(1.1);
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.inputBox {
+    margin-bottom: 20px;
+}
+
+.inputBox input[type="text"],
+.inputBox input[type="password"] {
+    width: 125%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    transition: border-bottom-color 0.3s ease;
+    
+}
+
+.inputBox input[type="text"]:focus,
+.inputBox input[type="password"]:focus {
+    border-bottom-color: #4CAF50;
+}
+
+.btns {
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    
+}
+
+.btns:hover {
+    background-color: #45a049;
+}
+
